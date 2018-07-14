@@ -1,2 +1,6 @@
-<img src="/static/badbank/img/smileys/1.png" onload="alert(1)">
-
+<script>
+funtion test(){
+alert(123)
+}
+</script>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onload="test()">
