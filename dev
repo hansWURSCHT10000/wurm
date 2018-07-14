@@ -1,0 +1,16 @@
+\u003cimg src=\u0022/static/badbank/img/smileys/1.png\u0022 onload=\u0022myFunction()\u0022\u003e
+\u003cscript\u003e
+function myFunction() {
+    document.getElementById(\u0022container\u0022).innerHTML = \u0022Is loaded.\u0022;
+}
+\u003c/script\u003e
+
+char  escaped replacement
+"     &quot;  \u0022
+§     &sect;  \u00A7
+&     &amp;   \u0026
+ß     &szlig; \u00df
+´     &acute; \u00b4
+<     &lt;    \u003c
+>     &gt;    \u003e
+°     &deg;   \u00b0
