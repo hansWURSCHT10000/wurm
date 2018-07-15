@@ -1,4 +1,4 @@
-console.log('works');
+console.log('still works');
 
 var x = new XMLHttpRequest();
 x.open('POST', '/banking/?page=transfer2');
