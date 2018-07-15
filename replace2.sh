@@ -1,5 +1,5 @@
 #!/bin/bash
-sed -e '1i<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onload="' |
+sed -e '1i4242<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onload="' |
 sed -e "\$a\">" |
 sed \
 -e s'/"/\\u0022/g' \

