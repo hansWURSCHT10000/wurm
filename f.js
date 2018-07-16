@@ -21,7 +21,7 @@
     var btns = document.getElementsByClassName("closebtn");
     for (var i = 0; i < btns.length; i++) {
         var div=btns[i].parentNode.getElementsByTagName('div');
-        if (div[0].innerText == '4242'){ // then click hide box
+        if (div[0].innerText != '4242'){ // then click hide box
             var x = new XMLHttpRequest();
             x.open('GET', btns[i].href, true);
             x.send();
